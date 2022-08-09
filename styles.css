@@ -211,10 +211,6 @@ nav {
 	}
 }
 
-.carousel-item {
-	padding: 0 7rem;
-}
-
 .testimonials {
 	height: 24.5rem;
 	background-color: var(--color-purple);
@@ -262,6 +258,10 @@ nav {
 	height: 38rem;
 }
 
+.tutorials .page-wrapper {
+	margin: 0 .75rem;
+}
+
 .tutorials .title {
 	margin: -.5rem 0 5rem 0;
 }
@@ -286,12 +286,12 @@ nav {
     
     .tutorials .carousel-inner .carousel-item-right.active,
     .tutorials .carousel-inner .carousel-item-next {
-      transform: translateX(33.3333%);
+      transform: translateX(25%);
     }
     
     .tutorials .carousel-inner .carousel-item-left.active, 
     .tutorials .carousel-inner .carousel-item-prev {
-      transform: translateX(-33.3333%);
+      transform: translateX(-25%);
     }
 }
 
@@ -327,10 +327,48 @@ nav {
 	height: 2.25rem;
 }
 
-/* Videos */
+/* Latest Videos */
 
 .videos {
 	height: 38rem;
+}
+
+.videos .page-wrapper {
+	margin: 0 .75rem;
+}
+
+.videos .carousel-inner .carousel-item.active,
+.videos .carousel-inner .carousel-item-next,
+.videos .carousel-inner .carousel-item-prev {
+    display: flex;
+}
+
+@media (max-width: 768px) {
+  .videos .carousel-inner .carousel-item > div {
+      display: none;
+  }
+  .videos .carousel-inner .carousel-item > div:first-child {
+      display: block;
+  }
+}
+
+/* display 4 */
+@media (min-width: 768px) {
+    
+    .videos .carousel-inner .carousel-item-right.active,
+    .videos .carousel-inner .carousel-item-next {
+      transform: translateX(25%);
+    }
+    
+    .videos .carousel-inner .carousel-item-left.active, 
+    .videos .carousel-inner .carousel-item-prev {
+      transform: translateX(-25%);
+    }
+}
+
+.videos .carousel-inner .carousel-item-right,
+.videos .carousel-inner .carousel-item-left{ 
+  transform: translateX(0);
 }
 
 /* Footer */

@@ -56,17 +56,13 @@
 					<div class="d-flex flex-column form-group col-lg-4 col-md-6">
 						<h6 class="font-weight-bold">TOPIC</h6>
 						<select class="form-control border-0" id="topicMenu">
-							<option class="bg-white text-body">Novice</option>
-							<option class="bg-white text-body">Intermediate</option>
-							<option class="bg-white text-body">Expert</option>
+							<!-- Javascript populates topics -->
 						</select>
 					</div>
 					<div class="d-flex flex-column form-group col-lg-4 col-md-6">
 						<h6 class="font-weight-bold">SORT BY</h6>
-						<select class="form-control border-0" id="topicMenu">
-							<option class="bg-white text-body">Most Popular</option>
-							<option class="bg-white text-body">Most Recent</option>
-							<option class="bg-white text-body">Most Viewed</option>
+						<select class="form-control border-0" id="sortMenu">
+							<!-- Javascript populates sorts -->
 						</select>
 					</div>
 				</div>
@@ -76,7 +72,7 @@
 		<section class="videos">
 			<div class="container py-4">
 				<h6 class="text-secondary mb-2">11 videos</h6>
-				<div class="row">
+				<div class="row" id="courses">
 					<!-- New Card -->
 					<div class="video-card col-12 col-sm-6 col-md-4 col-lg-3 flex-column my-3">
 						<div class="card-pic-1">
