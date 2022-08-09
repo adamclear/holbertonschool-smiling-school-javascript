@@ -266,11 +266,6 @@ nav {
 	margin: -.5rem 0 5rem 0;
 }
 
-.tutorials .carousel-inner .carousel-item {
-	margin-right: auto;
-	justify-content: space-between;
-}
-
 .tutorials .carousel-inner .carousel-item.active,
 .tutorials .carousel-inner .carousel-item-next,
 .tutorials .carousel-inner .carousel-item-prev {
@@ -291,12 +286,12 @@ nav {
     
     .tutorials .carousel-inner .carousel-item-right.active,
     .tutorials .carousel-inner .carousel-item-next {
-      transform: translateX(50%);
+      transform: translateX(33.3333%);
     }
     
     .tutorials .carousel-inner .carousel-item-left.active, 
     .tutorials .carousel-inner .carousel-item-prev {
-      transform: translateX(-50%);
+      transform: translateX(-33.3333%);
     }
 }
 
