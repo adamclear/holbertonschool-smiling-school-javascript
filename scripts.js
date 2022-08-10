@@ -3,7 +3,7 @@ window.onload = () => {
 	testimonialPopulate();
 	tutorialPopulate();
 	latestPopulate();
-	coursesPopulate();
+	searchBarPopulate();
 }
 
 /* Testimonial */
@@ -159,13 +159,11 @@ function latestPopulate() {
 
 /* Courses */
 
-function coursesPopulate () {
-	var $courseResult = $('#courses');
+function searchBarPopulate () {
 	var $topicMenu = $('#topicMenu');
 	var $sortMenu = $('#sortMenu');
 
 	$.get('https://smileschool-api.hbtn.info/xml/courses', (result) => {
-		console.log(result.childNodes);
 		result.childNodes[0].childNodes[0].childNodes.forEach((result) => {
 			var topicTitle = capitalizeFirstLetter(result.textContent);
 			$topicMenu.append(`<option class="bg-white text-body">${topicTitle}</option>`);
@@ -175,11 +173,97 @@ function coursesPopulate () {
 			sortTitle = sortTitle.replace('_', ' ');
 			$sortMenu.append(`<option class="bg-white text-body">${sortTitle}</option>`);
 		});
-});
+	});
+	coursesPopulate();
+
+	$('form').submit((e) => {
+		e.preventDefault();
+		coursesPopulate();
+	});
+}
+
+function coursesPopulate() {
+	var $keywordValue = $('#searchInput').val();
+	var $topicValue = $('#topicMenu').val();
+	var $sortValue = $('#sortMenu').val();
+	var courseList = [];
+	$('#courses .spinner-border').show();
+
+	$.get('https://smileschool-api.hbtn.info/xml/courses', (result) => {
+		result.childNodes[0].childNodes[5].childNodes.forEach((result) => {
+			if ($keywordValue) {
+				for (let x = 0; x < result.childNodes[7].childNodes.length; x++) {
+					if ($keywordValue === result.childNodes[7].childNodes[x].childNodes[0].data) {
+						courseList.push(result);
+					}
+				}
+			} else {
+				courseList.push(result);
+			}
+			if ($topicValue && $topicValue != 'All') {
+				for (course of courseList) {
+					if (course.childNodes[6].textContent != $topicValue) {
+						courseList.pop(course);
+					}
+				}
+			}
+			if ($sortValue) {
+				if ($sortValue === 'Most popular') {
+					courseList.sort(sortByPopular);
+				} else if ($sortValue === 'Most recent') {
+					courseList.sort(sortByRecent);
+				} else if ($sortValue === 'Most viewed') {
+					courseList.sort(sortByViews);
+				}
+			}
+		});
+	});
+	setTimeout($('.spinner-border').hide(), 5000);
+	var $coursesInner = $('#courses');
+	console.log(courseList);
+	for (course of courseList) {
+		$coursesInner.append(`<div class="video-card col-12 col-sm-6 col-md-4 col-lg-3 flex-column my-3">
+														<div class="card-pic-${course.attributes[0].value}">
+															<img class="video_tn img-fluid" src="${course.childNodes[2].textContent}">
+															<img class="video_pb_course img-fluid" src="./images/play.png">
+														</div>
+														<div>
+															<h5 class="font-weight-bold">${course.childNodes[0].textContent}</h5>
+															<p>${course.childNodes[1].textContent}</p>
+														</div>
+														<div class="d-flex flex-row mb-2">
+															<img class="tutorial-profile rounded-circle" src="${course.childNodes[4].textContent}">
+															<h5 class="text-purple ml-3">${course.childNodes[3].textContent}</h5>
+														</div>
+														<div class="d-flex flex-row star-rating-${course.attributes[0].value}">
+														</div>
+												  </div>`);
+		var $starRating = $coursesInner.find(`.star-rating-${course.attributes[0].value}`);
+		for (let y = 1; y <= 5; y++) {
+			if (y <= course.attributes[1].value) {
+				$starRating.append(`<img class="star-rating mr-1" src="./images/star_on.png">`);
+			} else {
+				$starRating.append(`<img class="star-rating mr-1" src="./images/star_off.png">`);
+			}
+		}
+		$starRating.append(`<p class="duration text-purple">${course.childNodes[5].textContent}</p>`);
+	}
 }
 
 /* Helpers */
 
 function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+function sortByPopular(a, b) {
+	return ((b.attributes[1].value) > (a.attributes[1].value)) ? 1 : -1;
+}
+
+function sortByRecent(a, b) {
+	return ((b.attributes[3].value) > (a.attributes[3].value)) ? 1 : -1;
+}
+
+function sortByViews(a, b) {
+	return ((b.attributes[2].value) > (a.attributes[2].value)) ? 1 : -1;
 }

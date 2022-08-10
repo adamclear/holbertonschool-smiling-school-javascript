@@ -48,24 +48,24 @@
 		<!-- Search Bar -->
 		<section class="search-bar text-white">
 			<form class="container">
-				<div class="form-row">
-					<div class="d-flex flex-column form-group col-lg-4 col-md-12">
+				<form class="form-row">
+					<div class="d-flex flex-column form-group col-lg-4 col-md-12" id="searchInputForm">
 						<h6 class="font-weight-bold">KEYWORD</h6>
 						<input class="form-control border-0" type="search" id="searchInput" placeholder="Search by keywords">
 					</div>
-					<div class="d-flex flex-column form-group col-lg-4 col-md-6">
+					<div class="d-flex flex-column form-group col-lg-4 col-md-6" id="topicMenuForm">
 						<h6 class="font-weight-bold">TOPIC</h6>
 						<select class="form-control border-0" id="topicMenu">
 							<!-- Javascript populates topics -->
 						</select>
 					</div>
-					<div class="d-flex flex-column form-group col-lg-4 col-md-6">
+					<div class="d-flex flex-column form-group col-lg-4 col-md-6" id="sortMenuForm">
 						<h6 class="font-weight-bold">SORT BY</h6>
 						<select class="form-control border-0" id="sortMenu">
 							<!-- Javascript populates sorts -->
 						</select>
 					</div>
-				</div>
+				</form>
 			</form>
 		</section>
 		<!-- Videos -->
@@ -73,259 +73,8 @@
 			<div class="container py-4">
 				<h6 class="text-secondary mb-2">11 videos</h6>
 				<div class="row" id="courses">
-					<!-- New Card -->
-					<div class="video-card col-12 col-sm-6 col-md-4 col-lg-3 flex-column my-3">
-						<div class="card-pic-1">
-							<img class="video_tn img-fluid" src="./images/thumbnail_1.jpg">
-							<img class="video_pb_course img-fluid" src="./images/play.png">
-						</div>
-						<div>
-							<h5 class="font-weight-bold">Natural Smile</h5>
-							<p>Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.</p>
-						</div>
-						<div class="d-flex flex-row mb-2">
-							<img class="tutorial-profile rounded-circle" src="./images/profile_1.jpg">
-							<h5 class="text-purple ml-3">Phillip Massey</h5>
-						</div>
-						<div class="d-flex flex-row">
-							<img class="star-rating mr-1" src="./images/star_on.png">
-							<img class="star-rating mr-1" src="./images/star_on.png">
-							<img class="star-rating mr-1" src="./images/star_on.png">
-							<img class="star-rating mr-1" src="./images/star_on.png">
-							<img class="star-rating mr-1" src="./images/star_off.png">
-							<p class="duration text-purple">8 min</p>
-						</div>
-					</div>
-					<!-- New Card -->
-					<div class="video-card col-12 col-sm-6 col-md-4 col-lg-3 flex-column my-3">
-						<div class="card-pic-2">
-							<img class="video_tn img-fluid" src="./images/thumbnail_3.jpg">
-							<img class="video_pb img-fluid" src="./images/play.png">
-						</div>
-						<div>
-							<h5 class="font-weight-bold">Sad Smile</h5>
-							<p>Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.</p>
-						</div>
-						<div class="d-flex flex-row mb-2">
-							<img class="tutorial-profile rounded-circle" src="./images/profile_4.jpg">
-							<h5 class="text-purple ml-3">Henry Huges</h5>
-						</div>
-						<div class="d-flex flex-row">
-							<img class="star-rating mr-1" src="./images/star_on.png">
-							<img class="star-rating mr-1" src="./images/star_on.png">
-							<img class="star-rating mr-1" src="./images/star_on.png">
-							<img class="star-rating mr-1" src="./images/star_off.png">
-							<img class="star-rating mr-1" src="./images/star_off.png">
-							<p class="duration text-purple">12 min</p>
-						</div>
-					</div>
-					<!-- New Card -->
-					<div class="video-card col-12 col-sm-6 col-md-4 col-lg-3 flex-column my-3">
-						<div class="card-pic-3">
-							<img class="video_tn img-fluid" src="./images/thumbnail_4.jpg">
-							<img class="video_pb img-fluid" src="./images/play.png">
-						</div>
-						<div>
-							<h5 class="font-weight-bold">Diagonal Smile</h5>
-							<p>Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.</p>
-						</div>
-						<div class="d-flex flex-row mb-2">
-							<img class="tutorial-profile rounded-circle" src="./images/profile_3.jpg">
-							<h5 class="text-purple ml-3">Bruce Walters</h5>
-						</div>
-						<div class="d-flex flex-row">
-							<img class="star-rating mr-1" src="./images/star_on.png">
-							<img class="star-rating mr-1" src="./images/star_on.png">
-							<img class="star-rating mr-1" src="./images/star_on.png">
-							<img class="star-rating mr-1" src="./images/star_on.png">
-							<img class="star-rating mr-1" src="./images/star_off.png">
-							<p class="duration text-purple">10 min</p>
-						</div>
-					</div>
-					<!-- New Card -->
-					<div class="video-card col-12 col-sm-6 col-md-4 col-lg-3 flex-column my-3">
-						<div class="card-pic-4">
-							<img class="video_tn img-fluid" src="./images/thumbnail_2.jpg">
-							<img class="video_pb img-fluid" src="./images/play.png">
-						</div>
-						<div>
-							<h5 class="font-weight-bold">Happy Smile</h5>
-							<p>Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.</p>
-						</div>
-						<div class="d-flex flex-row mb-2">
-							<img class="tutorial-profile rounded-circle" src="./images/profile_2.jpg">
-							<h5 class="text-purple ml-3">Nannie Lawrence</h5>
-						</div>
-						<div class="d-flex flex-row">
-							<img class="star-rating mr-1" src="./images/star_on.png">
-							<img class="star-rating mr-1" src="./images/star_on.png">
-							<img class="star-rating mr-1" src="./images/star_on.png">
-							<img class="star-rating mr-1" src="./images/star_on.png">
-							<img class="star-rating mr-1" src="./images/star_on.png">
-							<p class="duration text-purple">7 min</p>
-						</div>
-					</div>
-					<!-- New Card -->
-					<div class="video-card col-12 col-sm-6 col-md-4 col-lg-3 flex-column my-3">
-						<div class="card-pic-1">
-							<img class="video_tn img-fluid" src="./images/thumbnail_1.jpg">
-							<img class="video_pb_course img-fluid" src="./images/play.png">
-						</div>
-						<div>
-							<h5 class="font-weight-bold">Natural Smile</h5>
-							<p>Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.</p>
-						</div>
-						<div class="d-flex flex-row mb-2">
-							<img class="tutorial-profile rounded-circle" src="./images/profile_1.jpg">
-							<h5 class="text-purple ml-3">Phillip Massey</h5>
-						</div>
-						<div class="d-flex flex-row">
-							<img class="star-rating mr-1" src="./images/star_on.png">
-							<img class="star-rating mr-1" src="./images/star_on.png">
-							<img class="star-rating mr-1" src="./images/star_on.png">
-							<img class="star-rating mr-1" src="./images/star_on.png">
-							<img class="star-rating mr-1" src="./images/star_off.png">
-							<p class="duration text-purple">8 min</p>
-						</div>
-					</div>
-					<!-- New Card -->
-					<div class="video-card col-12 col-sm-6 col-md-4 col-lg-3 flex-column my-3">
-						<div class="card-pic-2">
-							<img class="video_tn img-fluid" src="./images/thumbnail_3.jpg">
-							<img class="video_pb img-fluid" src="./images/play.png">
-						</div>
-						<div>
-							<h5 class="font-weight-bold">Sad Smile</h5>
-							<p>Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.</p>
-						</div>
-						<div class="d-flex flex-row mb-2">
-							<img class="tutorial-profile rounded-circle" src="./images/profile_4.jpg">
-							<h5 class="text-purple ml-3">Henry Huges</h5>
-						</div>
-						<div class="d-flex flex-row">
-							<img class="star-rating mr-1" src="./images/star_on.png">
-							<img class="star-rating mr-1" src="./images/star_on.png">
-							<img class="star-rating mr-1" src="./images/star_on.png">
-							<img class="star-rating mr-1" src="./images/star_off.png">
-							<img class="star-rating mr-1" src="./images/star_off.png">
-							<p class="duration text-purple">12 min</p>
-						</div>
-					</div>
-					<!-- New Card -->
-					<div class="video-card col-12 col-sm-6 col-md-4 col-lg-3 flex-column my-3">
-						<div class="card-pic-3">
-							<img class="video_tn img-fluid" src="./images/thumbnail_4.jpg">
-							<img class="video_pb img-fluid" src="./images/play.png">
-						</div>
-						<div>
-							<h5 class="font-weight-bold">Diagonal Smile</h5>
-							<p>Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.</p>
-						</div>
-						<div class="d-flex flex-row mb-2">
-							<img class="tutorial-profile rounded-circle" src="./images/profile_3.jpg">
-							<h5 class="text-purple ml-3">Bruce Walters</h5>
-						</div>
-						<div class="d-flex flex-row">
-							<img class="star-rating mr-1" src="./images/star_on.png">
-							<img class="star-rating mr-1" src="./images/star_on.png">
-							<img class="star-rating mr-1" src="./images/star_on.png">
-							<img class="star-rating mr-1" src="./images/star_on.png">
-							<img class="star-rating mr-1" src="./images/star_off.png">
-							<p class="duration text-purple">10 min</p>
-						</div>
-					</div>
-					<!-- New Card -->
-					<div class="video-card col-12 col-sm-6 col-md-4 col-lg-3 flex-column my-3">
-						<div class="card-pic-4">
-							<img class="video_tn img-fluid" src="./images/thumbnail_2.jpg">
-							<img class="video_pb img-fluid" src="./images/play.png">
-						</div>
-						<div>
-							<h5 class="font-weight-bold">Happy Smile</h5>
-							<p>Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.</p>
-						</div>
-						<div class="d-flex flex-row mb-2">
-							<img class="tutorial-profile rounded-circle" src="./images/profile_2.jpg">
-							<h5 class="text-purple ml-3">Nannie Lawrence</h5>
-						</div>
-						<div class="d-flex flex-row">
-							<img class="star-rating mr-1" src="./images/star_on.png">
-							<img class="star-rating mr-1" src="./images/star_on.png">
-							<img class="star-rating mr-1" src="./images/star_on.png">
-							<img class="star-rating mr-1" src="./images/star_on.png">
-							<img class="star-rating mr-1" src="./images/star_on.png">
-							<p class="duration text-purple">7 min</p>
-						</div>
-					</div>
-					<!-- New Card -->
-					<div class="video-card col-12 col-sm-6 col-md-4 col-lg-3 flex-column my-3">
-						<div class="card-pic-1">
-							<img class="video_tn img-fluid" src="./images/thumbnail_1.jpg">
-							<img class="video_pb_course img-fluid" src="./images/play.png">
-						</div>
-						<div>
-							<h5 class="font-weight-bold">Natural Smile</h5>
-							<p>Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.</p>
-						</div>
-						<div class="d-flex flex-row mb-2">
-							<img class="tutorial-profile rounded-circle" src="./images/profile_1.jpg">
-							<h5 class="text-purple ml-3">Phillip Massey</h5>
-						</div>
-						<div class="d-flex flex-row">
-							<img class="star-rating mr-1" src="./images/star_on.png">
-							<img class="star-rating mr-1" src="./images/star_on.png">
-							<img class="star-rating mr-1" src="./images/star_on.png">
-							<img class="star-rating mr-1" src="./images/star_on.png">
-							<img class="star-rating mr-1" src="./images/star_off.png">
-							<p class="duration text-purple">8 min</p>
-						</div>
-					</div>
-					<!-- New Card -->
-					<div class="video-card col-12 col-sm-6 col-md-4 col-lg-3 flex-column my-3">
-						<div class="card-pic-2">
-							<img class="video_tn img-fluid" src="./images/thumbnail_3.jpg">
-							<img class="video_pb img-fluid" src="./images/play.png">
-						</div>
-						<div>
-							<h5 class="font-weight-bold">Sad Smile</h5>
-							<p>Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.</p>
-						</div>
-						<div class="d-flex flex-row mb-2">
-							<img class="tutorial-profile rounded-circle" src="./images/profile_4.jpg">
-							<h5 class="text-purple ml-3">Henry Huges</h5>
-						</div>
-						<div class="d-flex flex-row">
-							<img class="star-rating mr-1" src="./images/star_on.png">
-							<img class="star-rating mr-1" src="./images/star_on.png">
-							<img class="star-rating mr-1" src="./images/star_on.png">
-							<img class="star-rating mr-1" src="./images/star_off.png">
-							<img class="star-rating mr-1" src="./images/star_off.png">
-							<p class="duration text-purple">12 min</p>
-						</div>
-					</div>
-					<!-- New Card -->
-					<div class="video-card col-12 col-sm-6 col-md-4 col-lg-3 flex-column my-3">
-						<div class="card-pic-3">
-							<img class="video_tn img-fluid" src="./images/thumbnail_4.jpg">
-							<img class="video_pb img-fluid" src="./images/play.png">
-						</div>
-						<div>
-							<h5 class="font-weight-bold">Diagonal Smile</h5>
-							<p>Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.</p>
-						</div>
-						<div class="d-flex flex-row mb-2">
-							<img class="tutorial-profile rounded-circle" src="./images/profile_3.jpg">
-							<h5 class="text-purple ml-3">Bruce Walters</h5>
-						</div>
-						<div class="d-flex flex-row">
-							<img class="star-rating mr-1" src="./images/star_on.png">
-							<img class="star-rating mr-1" src="./images/star_on.png">
-							<img class="star-rating mr-1" src="./images/star_on.png">
-							<img class="star-rating mr-1" src="./images/star_on.png">
-							<img class="star-rating mr-1" src="./images/star_off.png">
-							<p class="duration text-purple">10 min</p>
-						</div>
-					</div>
+					<div class="spinner-border text-purple"></div>
+					<!-- Javascript populates courses -->
 				</div>
 			</div>
 		</section>
