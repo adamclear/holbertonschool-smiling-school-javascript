@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<body lang="en" dir="ltr">
+
+    <head>
+        <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+        <title>Smiling School - Courses</title>
+		<!-- Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Coiny&display=swap" rel="stylesheet">
+		<!-- Stylesheets -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<link rel="stylesheet" href="styles.css">
+		<!-- Favicon -->
+		<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+		<link rel="icon" type="image/png" href="../images/favicon.png">
+		<!-- Javascript -->
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="xml-scripts.js"></script>
+    </head>
+
+    <body>
+
+        <header class="courses-header d-flex flex-column align-items-center" id="header">
+			<div class="navbar d-flex flex-md-row flex-column justify-content-between mb-3 mb-md-0">
+				<a href="./homepage.html" class="d-flex flex-column flex-md-row align-items-center mt-3" href="#">
+					<img class="logo-smile mr-2 mb-2" src="../images/smile_off.png">
+					<img class="logo-text" src="../images/logo.png">
+				</a>
+				<nav class="collapse d-md-flex flex-md-row flex-column mr-4 justify-content-between" id="nav-links">
+						<a href="./courses.html" class="nav-link text-center" href="#">COURSES</a>
+						<a href="./pricing.html" class="nav-link text-center" href="#">PRICING</a>
+						<a href="#login" class="nav-link text-center" href="#">LOGIN</a>
+				</nav>
+				<!-- Hamburger -->
+				<span class="mobile-label d-md-none text-white position-absolute"></span>
+				<button class="navbar-toggler position-absolute dm-md-none bg-transparent" type="button"data-toggle="collapse" data-target="#nav-links" aria-expanded="false" aria-label="Toggle nav-bar">
+				</button>
+			</div>
+			<div class="courses-title text-white d-flex flex-column align-items-center">
+				<h2 class="d-none d-md-flex mx-auto mt-5">« Don’t cry because it’s over.</h2>
+            	<h2 class="d-none d-md-flex mx-auto mb-0 pb-5"><span class="text-purple">Smile</span>&nbsp;because it happened. »</h2>
+			</div>
+			<div class="mobile-nav-div d-none d-md-block"></div>
+		</header>
+		<!-- Search Bar -->
+		<section class="search-bar text-white">
+			<div class="container">
+				<form class="form-row">
+					<div class="d-flex flex-column form-group col-lg-4 col-md-12" id="searchInputForm">
+						<h6 class="font-weight-bold">KEYWORD</h6>
+						<input class="form-control border-0" type="search" id="searchInput" placeholder="Search by keywords">
+					</div>
+					<div class="d-flex flex-column form-group col-lg-4 col-md-6" id="topicMenuForm">
+						<h6 class="font-weight-bold">TOPIC</h6>
+						<select class="form-control border-0" id="topicMenu">
+							<!-- Javascript populates topics -->
+						</select>
+					</div>
+					<div class="d-flex flex-column form-group col-lg-4 col-md-6" id="sortMenuForm">
+						<h6 class="font-weight-bold">SORT BY</h6>
+						<select class="form-control border-0" id="sortMenu">
+							<!-- Javascript populates sorts -->
+						</select>
+					</div>
+				</form>
+			</div>
+		</section>
+		<!-- Videos -->
+		<section class="videos">
+			<div class="container py-4">
+				<h6 class="text-secondary mb-2 num-vids"></h6>
+				<div class="row" id="courses">
+					<div class="spinner-border text-purple"></div>
+					<!-- Javascript populates courses -->
+				</div>
+			</div>
+		</section>
+        <!-- Footer -->
+        <footer class="text-center text-white justify-content-center py-5">
+			<div class="footer-nav d-flex flex-column flex-md-row justify-content-md-between align-items-center">
+				<a href="./homepage.html" class="logo d-flex flex-row align-items-center mt-3" href="#">
+					<img class="logo-smile mr-2 mb-2" src="../images/smile_off.png">
+					<img class="logo-text" src="../images/logo.png">
+				</a>
+				<div class="social d-flex flex-row text-white justify-content-between">
+					<a href="https://www.facebook.com/HolbertonSchoolTulsa/" class="facebook social-icon text-center"></a>
+                    <a href="https://twitter.com/holbertonschool" class="twitter social-icon text-center"></a>
+                    <a href="https://www.instagram.com/holbertonschool/" class="instagram social-icon text-center"></a>
+				</div>
+			</div>
+			<div class="copyright text-secondary">©smileschool 2020</div>
+        </footer>
+        
+    </body>
+
+</html>
